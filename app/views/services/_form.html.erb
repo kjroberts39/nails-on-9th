@@ -1,0 +1,23 @@
+<%= form_for @service do |f| %>
+
+	<div>
+		<%= f.label :title %>
+
+		<%= f.text_field :title %>
+	</div>
+
+	<div>
+		<%= f.label :description %>
+
+		<%= f.text_area :description %>
+	</div>
+
+	<div>
+		<%= f.label :image_stuffs %>
+
+		<%= f.text_field :image %>
+	</div>
+
+	<%= f.submit 'Save Service' %>
+
+<% end %>

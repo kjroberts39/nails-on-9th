@@ -1,0 +1,17 @@
+<%= form_for @exhibit do |f| %>
+
+	<div>
+		<%= f.label :photo %>
+
+		<%= f.text_field :photo %>
+	</div>
+
+	<div>
+		<%= f.label :artist %>
+
+		<%= f.text_field :artist %>
+	</div>
+
+	<%= f.submit 'Save Exhibit Item' %>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h1>I am the Gallery page</h1>
+<%= link_to "Create a New Exhibit Item", new_exhibit_path %>
+<% @exhibits.each do |exhibit| %>
+	<div>
+		<div><%=  image_tag exhibit.photo %></div>
+		<div><%= exhibit.artist %></div>
+		<%= link_to "Edit Exhibit", edit_exhibit_path(exhibit) %>
+		<%= link_to "Delete Exhibit", exhibit_path(exhibit), method: :delete, id: "delete_exhibit_#{exhibit.id}_from_index", data: { confirm: 'Are you sure?' } %>
+	</div>
+<% end %>

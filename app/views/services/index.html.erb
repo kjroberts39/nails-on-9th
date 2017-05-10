@@ -1,9 +1,12 @@
-<h1>I am the services page</h1>
 
+<h1>I am the services page</h1>
+<%= link_to "Create a New Service", new_service_path %>
 <% @services.each do |service| %>
 	<div>
 		<div><%=  image_tag service.image %></div>
 		<div><%= service.title %></div>
 		<div><%= service.description %></div>
+		<%= link_to "Edit Service", edit_service_path(service) %>
+		<%= link_to "Delete Service", service_path(service), method: :delete, id: "delete_service_#{service.id}_from_index", data: { confirm: 'Are you sure?' } %>
 	</div>
 <% end %>

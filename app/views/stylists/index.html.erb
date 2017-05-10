@@ -1,0 +1,11 @@
+<h1>I am the Stylists page</h1>
+<%= link_to "New Stylist", new_stylist_path %>
+<% @stylists.each do |stylist| %>
+	<div>
+		<div><%=  image_tag stylist.image %></div>
+		<div><%= stylist.name %></div>
+		<div><%= stylist.bio %></div>
+		<%= link_to "Edit Stylist's Info", edit_stylist_path(stylist) %>
+		<%= link_to "Delete Stylist", stylist_path(stylist), method: :delete, id: "delete_stylist_#{stylist.id}_from_index", data: { confirm: 'Are you sure?' } %>
+	</div>
+<% end %>
